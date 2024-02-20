@@ -1,0 +1,1934 @@
+
+<!doctype html>
+<html lang="bg" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/qgis3_notext.svg">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.0.0">
+    
+    
+      
+        <title>ГИС? Яко! - QGIS.бг докс</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a3f8f96a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/consent.css">
+    
+      <link rel="stylesheet" href="../../assets/qgisbg.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Към съдържанието
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Горен колонтитул">
+    <a href="../.." title="QGIS.бг докс" class="md-header__button md-logo" aria-label="QGIS.бг докс">
+      
+  <img src="../../assets/qgis3_text_bg.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            QGIS.бг докс
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ГИС? Яко!
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Търси" placeholder="Търси" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Изчисти" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/qgisbg/docs/" title="Към хранилището" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Табове" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Начало
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../wiki/about/" class="md-tabs__link">
+        Уики
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../gisintro/01_preamble/" class="md-tabs__link">
+        Увод в ГИС
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Външни препратки
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../meta/1000_broken_tutorial/" class="md-tabs__link">
+        QGIS.бг мета
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../maps/oops/001_po_sveta_i_u_nas/" class="md-tabs__link">
+        Карти
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../events/2024_foss4g_bg/" class="md-tabs__link">
+      FOSS4G:BG - Отворен ГИС събор 2024
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="QGIS.бг докс" class="md-nav__button md-logo" aria-label="QGIS.бг докс">
+      
+  <img src="../../assets/qgis3_text_bg.svg" alt="logo">
+
+    </a>
+    QGIS.бг докс
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/qgisbg/docs/" title="Към хранилището" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Начало
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Уики
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Уики" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Уики
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/about/" class="md-nav__link">
+        За уикито
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+      
+      <label class="md-nav__link" for="nav-2-2">
+        Формати
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Формати" data-md-level="2">
+        <label class="md-nav__title" for="nav-2-2">
+          <span class="md-nav__icon md-icon"></span>
+          Формати
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/formats/0000_kakvo_e_csv/" class="md-nav__link">
+        Какво е CSV (си-ес-ви)?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/formats/0000_kakvo_e_geojson/" class="md-nav__link">
+        Какво е Geojson (геоджейсон)?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/formats/0000_kakvo_e_shapefile/" class="md-nav__link">
+        Какво е shapefile (шейпфайл)?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/formats/0000_kakvo_e_topojson/" class="md-nav__link">
+        Какво е topojson (топоджейсон)?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/formats/0000_koi_vektoren_format_da_izbera/" class="md-nav__link">
+        Кой векторен формат да избера за моите данни?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/formats/markdown/" class="md-nav__link">
+        Какво е Markdown (маркдаун)?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
+      
+      <label class="md-nav__link" for="nav-2-3">
+        QGIS рецепти
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="QGIS рецепти" data-md-level="2">
+        <label class="md-nav__title" for="nav-2-3">
+          <span class="md-nav__icon md-icon"></span>
+          QGIS рецепти
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/qgis/kak_da_instalirame_qgis_v_windows/" class="md-nav__link">
+        Как да инсталираме QGIS в Windows?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/qgis/kak_da_instalirame_qgis_v_ubuntu/" class="md-nav__link">
+        Как да инсталирам QGIS в Debian/Ubuntu?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/qgis/otkude_da_namerim_geografski_danni_za_bulgaria/" class="md-nav__link">
+        Откъде да намеря географски данни за България?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/qgis/kak_da_izpolzvam_danni_ot_osm_s_quickosm/" class="md-nav__link">
+        Как да използвам данни от OpenStreetMap с QuickOSM?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/qgis/kak_da_filtrirame_i_pokazhem_samo_chast_ot_obektite/" class="md-nav__link">
+        Как да филтрираме и покажем само част от обектите в слоя?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/qgis/kak_da_smenim_proektsiyata_na_vektoren_sloy/" class="md-nav__link">
+        Как да сменим проекцията на векторен слой?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/qgis/kak_da_dobavim_novo_pole_na_vektoren_sloy/" class="md-nav__link">
+        Как да добавим ново поле на векторен слой?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/qgis/kak_da_iztriem_pole_ot_vektoren_sloy/" class="md-nav__link">
+        Как да изтрием поле от векторен слой?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/qgis/kak_da_svarzhem_dannite_ot_dva_sloya/" class="md-nav__link">
+        Как да свържем (JOIN) данните от два слоя?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+      
+      <label class="md-nav__link" for="nav-2-4">
+        Ресурси
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Ресурси" data-md-level="2">
+        <label class="md-nav__title" for="nav-2-4">
+          <span class="md-nav__icon md-icon"></span>
+          Ресурси
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/resources/yt_gis/" class="md-nav__link">
+        Ютуб канали на ГИС тематика
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
+      
+      <label class="md-nav__link" for="nav-2-5">
+        Tехнологии
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tехнологии" data-md-level="2">
+        <label class="md-nav__title" for="nav-2-5">
+          <span class="md-nav__icon md-icon"></span>
+          Tехнологии
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/001_qgis/" class="md-nav__link">
+        QGIS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/002_gdal/" class="md-nav__link">
+        GDAL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/003_qfield/" class="md-nav__link">
+        QField
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/004_qfieldcloud/" class="md-nav__link">
+        QFieldCloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/005_postgresql/" class="md-nav__link">
+        PostgreSQL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/006_postgis/" class="md-nav__link">
+        PostGIS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/007_pgrouting/" class="md-nav__link">
+        PgRouting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/008_openlayers/" class="md-nav__link">
+        OpenLayers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/009_geonode/" class="md-nav__link">
+        GeoNode
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/010_leafletjs/" class="md-nav__link">
+        Leaflet.js
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/technologies/011_geoserver/" class="md-nav__link">
+        GeoServer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/precision_vs_accuracy/" class="md-nav__link">
+        Каква е разликата между прецизност (precision) и точност (accuracy)?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        Увод в ГИС
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Увод в ГИС" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Увод в ГИС
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/01_preamble/" class="md-nav__link">
+        01. Добре дошли
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/02_introducing_gis/" class="md-nav__link">
+        02. Въведение в ГИС
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/03_vector_data/" class="md-nav__link">
+        03. Векторни данни
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/04_attribute_data/" class="md-nav__link">
+        04. Атрибутивна таблица
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/05_data_capture/" class="md-nav__link">
+        05. Събиране на данни
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/06_raster_data/" class="md-nav__link">
+        06. Растери
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/07_topology/" class="md-nav__link">
+        07. Топология
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/08_crs/" class="md-nav__link">
+        08. Проекции и координатни системи
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/09_map_production/" class="md-nav__link">
+        09. Създаване на карти
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/10_buffers/" class="md-nav__link">
+        10.Анализ с буфери
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/11_interpolation/" class="md-nav__link">
+        11. Анализ с интерполация
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/12_raster_calculator/" class="md-nav__link">
+        12. Анализ на растери
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/98_authors/" class="md-nav__link">
+        12. За авторите
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gisintro/99_licence/" class="md-nav__link">
+        13. Лиценз
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        Външни препратки
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Външни препратки" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Външни препратки
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ГИС? Яко!
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ГИС? Яко!
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Съдържание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Съдържание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Легенда
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Ръководства, учебници и материали
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ГИС софтуер
+  </a>
+  
+    <nav class="md-nav" aria-label="ГИС софтуер">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Настолни
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Мобилни
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Команден ред
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Визуализации онлайн
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    Сървърни продукти
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgis-" class="md-nav__link">
+    QGIS - плъгини и благинки
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    Библиотеки
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    Данни
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    Картни основи
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    Онлайн карти
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    Онлайн визуализации
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    Картографски визуализации
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    Географски игри
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    Инструменти за градско планиране
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1000_data/" class="md-nav__link">
+        ГИС данни
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1000_terminology/" class="md-nav__link">
+        ГИС термини
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        QGIS.бг мета
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="QGIS.бг мета" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          QGIS.бг мета
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1000_broken_tutorial/" class="md-nav__link">
+        Какво да направим, ако инструкциите не работят?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1000_install_git_windows/" class="md-nav__link">
+        Как да инсталираме git в Windows?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1000_install_miniconda_windows/" class="md-nav__link">
+        Как да инсталираме Miniconda в Windows?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1000_install_vscode_windows/" class="md-nav__link">
+        Как да инсталираме Visual Studio Code в Windows?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1000_versioning/" class="md-nav__link">
+        Какво означават версиите на програмите?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1110_git_intro/" class="md-nav__link">
+        Какво е git?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1110_github_intro/" class="md-nav__link">
+        Как да сътрудничим в GitHub?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1110_github_modifications/" class="md-nav__link">
+        Как да сътрудничим по проект в GitHub изцяло през браузъра?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1110_qgisbg_docs_setup_windows/" class="md-nav__link">
+        Как да настроим среда за работа по QGIS.бг докс в Windows?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1120_qgisbg_docs_local_dev/" class="md-nav__link">
+        Как да работим по QGIS.бг докс локално?
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meta/1120_qgisbg_docs_markdown/" class="md-nav__link">
+        Какво поддържа Markdown в QGIS.бг докс?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+      
+      <label class="md-nav__link" for="nav-6">
+        Карти
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Карти" data-md-level="1">
+        <label class="md-nav__title" for="nav-6">
+          <span class="md-nav__icon md-icon"></span>
+          Карти
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1" >
+      
+      <label class="md-nav__link" for="nav-6-1">
+        Опа
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Опа" data-md-level="2">
+        <label class="md-nav__title" for="nav-6-1">
+          <span class="md-nav__icon md-icon"></span>
+          Опа
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maps/oops/001_po_sveta_i_u_nas/" class="md-nav__link">
+        По света и у нас
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maps/oops/002_aurelian/" class="md-nav__link">
+        Аврелиан - възстановителят на света
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maps/oops/003_wall_of_shame/" class="md-nav__link">
+        Стена на срама
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maps/oops/004_kitaiski_kanal/" class="md-nav__link">
+        Китайският план за канал през Балканите
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/2024_foss4g_bg/" class="md-nav__link">
+        FOSS4G:BG - Отворен ГИС събор 2024
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Съдържание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Съдържание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Легенда
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Ръководства, учебници и материали
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ГИС софтуер
+  </a>
+  
+    <nav class="md-nav" aria-label="ГИС софтуер">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Настолни
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Мобилни
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Команден ред
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Визуализации онлайн
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    Сървърни продукти
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgis-" class="md-nav__link">
+    QGIS - плъгини и благинки
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    Библиотеки
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    Данни
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    Картни основи
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    Онлайн карти
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    Онлайн визуализации
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    Картографски визуализации
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    Географски игри
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    Инструменти за градско планиране
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/qgisbg/docs/edit/master/docs/external/1000_awesome.md" title="Редактирай тази страница" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <details class="note" open="open"><summary>Забележка!</summary><p>Текстът на тази страница е зает без допълнителни модификации от <a href="//github.com/qgisbg/awesome-gis">Awesome GIS в GitHub</a>. Всякакви редакции и коментари е необходимо да се извършват в оригиналното хранилище.</p>
+</details>
+<h1 id="_1">ГИС? Яко!<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>Колекция от бази данни, обучителни материали, инструменти, карти и други полезни ресурси свързани с географска тематика. </p>
+<p>Но какво е ГИС?</p>
+<blockquote>
+<p>Географска информационна система (ГИС) е информационна система за създаване, манипулиране, съхраняване, анализ и визуализация на географски обвързани (пространствени) данни (на английски: Geographic data and information). 
+ГИС може да се отнася за различни технологии, процеси и методи. Технологията съпътства много операции и има много приложения в техниката, планирането, управлението, транспорта, застраховането, телекомуникациите, индустрията и във все повече области на човешкия живот[3] Поради това ГИС и приложенията, свързани с местоположението (на английски: location-based service, LBS), дават възможност за разработка на множество услуги за анализ и визуализация.</p>
+</blockquote>
+<p><a href="https://bg.wikipedia.org/wiki/Географска_информационна_система">https://bg.wikipedia.org/wiki/Географска_информационна_система</a></p>
+<p>Яко!</p>
+<p><strong>Тук е информация! Да направим тоя списък още по-як!</strong> При нови добавки моля последвайте инструкциите на <a href="https://github.com/geographybg/awesome-gis/blob/main/ContributingGuidelines.md">Инструкции за нови добавки</a>. Ако имате общи идеи и/или коментари за подобряване на този списък, моля пишете във <a href="https://github.com/geographybg/awesome-gis/">Въпроси</a>.</p>
+<p>Създаването на този списък беше вдъхновено от еквивалента му на английски <a href="https://github.com/sshuair/awesome-gis">Awesome GIS</a>.</p>
+<h2 id="_2">Легенда<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>За по-лесно ориентиране в списъкът по-долу, със система от емоджита се допълват някои белези на описаните ресурси по-долу.</p>
+<ul>
+<li><img alt="💶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4b6.svg" title=":euro:" /> - затворен или платен софтуер за обучителни или доброволчески цели</li>
+<li><img alt="👶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f476.svg" title=":baby:" /> - подходящ за начинаещи</li>
+<li><img alt="🐍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f40d.svg" title=":snake:" /> - наличен като Python библиотека</li>
+<li><img alt="⌨" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2328.svg" title=":keyboard:" /> - наличен като програма от командния ред</li>
+</ul>
+<h2 id="_3">Ръководства, учебници и материали<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://mgu.bg/wp-content//uploads/2022/06/RS_Exercises_v3_2022.pdf">Упражнения по дистанционни методи в геологията</a> - Упражнения по дистанционни методи с отворен софтуер (QGIS, SNAP) на доц. д-р Камен Попов от Минно-Геоложки Университет „Св. Иван Рилски”. Упражненията дават добра представа за основните принципи в дистанционните изследвания, които са всеобхватно приложими и далеч не само в геологията.</li>
+<li><a href="https://learnosm.org/en/">learnosm.org</a> - Научи всичко необходимо за OpenStreetMap.</li>
+</ul>
+<h2 id="_4">ГИС софтуер<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Софтуерни продукти, които помагат за работата с пространствени данни:</p>
+<h3 id="_5">Настолни<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://qgis.org/">QGIS</a> <img alt="👶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f476.svg" title=":baby:" /> <img alt="🐍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f40d.svg" title=":snake:" /> - Най-разпространеният и богат на функционалности безплатен и отворен ГИС софтуер.</li>
+</ul>
+<h3 id="_6">Мобилни<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://qfield.org/">QField</a> <img alt="👶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f476.svg" title=":baby:" /> - Цялата сила на QGIS в ръцете ти, безплатно. Мобилна версия на QGIS. </li>
+</ul>
+<h3 id="_7">Команден ред <img alt="⌨" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2328.svg" title=":keyboard:" /><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://gdal.org">GDAL</a> <img alt="🐍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f40d.svg" title=":snake:" /> - GDAL - Geospatial Data Abstraction Library е преводач между различни растерни и векторни геопространствени формати. Сърцето на почти всички софтуери с отворен код.</li>
+<li><a href="https://pcraster.geo.uu.nl">PCRaster</a> <img alt="🐍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f40d.svg" title=":snake:" /> - Колекция от софтуер за прилагане на пространствено-времеви модели и анализи.</li>
+</ul>
+<h3 id="_8">Визуализации онлайн<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>Създаване на интерактивни карти, достъпни чрез интернет:</p>
+<ul>
+<li><a href="https://mapchart.net">MapChart</a> <img alt="👶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f476.svg" title=":baby:" /> - MapChart е софтуер за лесно изчертаване на карти онлайн изцяло с безплатен онлайн интерфейс.</li>
+<li><a href="https://leafletjs.com/">Leaflet</a> <img alt="👶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f476.svg" title=":baby:" /> - JavaScript библиотека за създаване на инстерактивни карти удобни за преглед и на мобилно устройство.</li>
+<li><a href="https://github.com/leaflet-extras/leaflet-providers">leaflet-providers</a> - Разширение за Leaflet, което позволява зареждането на базови слоеве от различни безплатни (но понякога лимитирани) доставчици.</li>
+<li><a href="http://openlayers.org/">OpenLayers</a> - JavaScript библиотека за визуализиране на карти.</li>
+<li><a href="https://d3js.org/">D3.js</a> - JavaScript библиотека за интерактивни документи създадени от данни.</li>
+<li><a href="https://www.datawrapper.de/">DataWrappeer</a> <img alt="💶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4b6.svg" title=":euro:" /> <img alt="👶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f476.svg" title=":baby:" /> - Инструмент за създаване на карти и прилежащи графики и таблици със собствени данни.</li>
+</ul>
+<h3 id="_9">Сървърни продукти<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://geoserver.org/">Geoserver</a> - Java сървър за публикуване на ГИС данни в уеб среда, съгласно OGC (WMS/WFS/WCS). </li>
+</ul>
+<h3 id="qgis-">QGIS - плъгини и благинки<a class="headerlink" href="#qgis-" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/afrigeri/geologic-symbols-qgis">Геоложки символи за QGIS</a> - Набор от символи използвани в геология, готови за използване във всеки проект.</li>
+</ul>
+<h3 id="_10">Библиотеки <img alt="🐍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f40d.svg" title=":snake:" /><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/Toblerity/Shapely">Shapely</a> - Библиотека за работа с геометрични фигури в декартовата (правоъгълна) координатна система.</li>
+<li><a href="http://github.com/toblerity/fiona/">Fiona</a> <img alt="⌨" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2328.svg" title=":keyboard:" /> - Четене и писане на векторни ГИС данни в Python.</li>
+<li><a href="https://github.com/mapbox/rasterio">Rasterio</a> <img alt="⌨" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2328.svg" title=":keyboard:" /> - Четене и писане на растерни геопрастранствени данни в Python.</li>
+<li><a href="http://www.numpy.org/">NumPy</a> - NumPy е в основата за научна работа с числа в Python.</li>
+<li><a href="https://pandas.pydata.org">pandas</a> - Бърза, мощна, гъвкава и лесна библиотека за работа със статистически данни.</li>
+<li><a href="https://github.com/geopandas/geopandas">GeoPandas</a> - GeoPandas разширява pandas за работа с географски обекти.</li>
+<li><a href="https://github.com/jswhit/pyproj">pyproj</a> - Библиотека за картографски проекции и трансформации, Python интерфейс на <a href="https://proj.org">PROJ</a>.</li>
+<li><a href="http://matplotlib.org/">matplotlib</a> - Чертаене на графики с Python.</li>
+<li><a href="http://networkx.github.io/">networkx</a> - За работа с графи (мрежи).</li>
+<li><a href="https://github.com/openaddresses/pyesridump">pyesridump</a> <img alt="⌨" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2328.svg" title=":keyboard:" /> - Изтегляне на всички обекти от ESRI MapServer слой в GeoJson.</li>
+<li><a href="https://github.com/martinfleis/momepy">momepy</a> - Библиотека за количествени измерения на формите в застроените територии.</li>
+</ul>
+<h2 id="_11">Данни<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>Наличните набори данни и техните източници са описани <a href="https://github.com/geographybg/awesome-gis/blob/main/data.md">тук</a>.</p>
+<ul>
+<li><a href="https://www.nsi.bg/bg/content/766/статистически-данни">Национален статистически институт (НСИ)</a> - Национален статистически институт на България. </li>
+<li><a href="https://www.nsi.bg/nrnm/">Национален регистър на населените места (НРНМ)</a> - Данни за населените места и административно-териториална структура на България.</li>
+<li><a href="https://apps.sentinel-hub.com/eo-browser/">Sentinel-Hub EO Browser</a> - Преглед и изтегляне на изображения от европейскш мисии (Sentinel).</li>
+<li><a href="https://earthexplorer.usgs.gov">USGS EarthExplorer</a> - Преглед и изтегляне на изображения от американски мисии (Landsat).</li>
+<li><a href="https://land.copernicus.eu/local/urban-atlas">Urban Atlas</a> - Urban Atlas предоставя общоевропейски сравними данни за земното покритие и земеползването във Функционални Урбанизирани Ареали (ФУА).</li>
+<li><a href="https://data.egov.bg/">OpenDataBG</a> - Портал за отворени данни на Република България. Данните са разделени по теми: Икономика, Здравеопазване, Околна среда, Население, Градове, Транспорт, Енергетика и др.</li>
+<li><a href="https://figshare.com/articles/dataset/Present_and_future_K_ppen-Geiger_climate_classification_maps_at_1-km_resolution/6396959/2">Климатична класификация по Кьопен-Гайгер</a> - Климатична класификация по Кьопен-Гайгер с разделителна способност от 1km2 с покритие за целия свят.</li>
+<li><a href="https://globalmaps.github.io/">GlobalMaps</a> - Отворени векторни и растерни данни за света и отделните държави - DEM, физикогеографски и антропогенни обекти. Пряка връзка към данните за България <a href="https://github.com/globalmaps/gmbg10">тук</a>.</li>
+<li><a href="https://portal.opentopography.org/dataCatalog">OpenTopography.org</a> - Отворени топографски данни с висока резолюция - облаци от точки и растери.</li>
+<li><a href="https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/home">ФАО - ООН</a> - Отворени данни с разнообразна насоченост предоставени от ФАО към ООН.</li>
+<li><a href="https://www.npolar.no/quantarctica/#toggle-id-2">Quantarctica</a> - Готови данни за Антарктида - подходящи за учебни цели.</li>
+</ul>
+<h2 id="_12">Картни основи<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://s2maps.eu">Sentinel2</a> - безоблачна сателитна растерна мозайка на света без облаци. Възможност за изтегляне и вграждане в ГИС.</li>
+<li><a href="http://maps.stamen.com">Stamen Maps</a> - разнообразни картни основи. Възможност за изтегляне и вграждане в ГИС.</li>
+<li><a href="http://web.uni-plovdiv.bg/vedrin/">BGTopoVJ</a> - руски топографски карти на България и Македония в мащаб 1:50000.</li>
+</ul>
+<h2 id="_13">Онлайн карти<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://map.blitzortung.org/">blitzortung.org</a> - Светкавиците по света в реално време.</li>
+<li><a href="https://waqi.info/bg">WAQI замърсяване на въздуха</a> - Световното качество на въздуха: Индекс на качеството на въздуха в реално време.</li>
+<li><a href="https://airbg.info/map/">AirBg замърсяване на въздуха</a> - Карта в реално време на качеството на въздуха в България.</li>
+<li><a href="https://native-land.ca/">Народи и племена в Новия свят</a> - Ареали на местното население в Новия свят - онлайн карта.</li>
+<li><a href="https://earthnow.usgs.gov/observer/">EarthNow! Landsat изображения</a> - Преглед на изображенията на американските сателити Landsat 7 и 8 в (почти) реално време.</li>
+<li><a href="http://www.unesco.org/languages-atlas/">Застрашените езици по света</a> - Атлас на застрашените от изчезване езици на UNESCO- онлайн карта.</li>
+<li><a href="http://265obshtini.bg/">ИПИ 265 общини</a> - Интерактивна карта на общините за достъпно и разбираемо представяне на голямо количество данни.</li>
+<li><a href="https://www.regionalprofiles.bg/bg/">ИПИ регионални профили</a> - Информация за развитието на областите в страната и допълването им с анализи на икономическите и социалните аспекти.</li>
+<li><a href="https://www.windy.com">Windy.com</a> - Интерактивна карта на посоката и скоростта на вятъра в реално време.</li>
+<li><a href="https://www.flightradar24.com">flightradar24</a> - Самолети в реално време.</li>
+<li><a href="https://tripsjournal.com/marshruti">Туристически маршрути в България</a> - Интерактивна карта на пешеходни и вело маршрути и еко пътеки в България.</li>
+<li><a href="https://bgindustrymap.com/bg">BG Industry Map</a> - Подробни карти и бази данни за 14 избрани индустриални сектора в България.</li>
+<li><a href="https://www.meteoblue.com/">Meteoblue</a> - Точна информация и прогнози за времето във всяка точка на света. Интерактивни прогнозни карти и карти метеорологичната обстановка в реално време.</li>
+<li><a href="https://zoom.earth/">Zoom Earth</a> - Визуализация на това как изглежда Земята в настоящият момент, с възможност за връщане назад във времето и проследяване развитието и движението на циклонални явления в различни точки на земното кълбо.</li>
+<li><a href="https://dinosaurpictures.org/ancient-earth">Ancient Earth globe</a> - Интерактивен глобус, показващ промените настъпили върху лицето на Земята от преди 750 милиона години до днес.</li>
+<li><a href="https://macrostrat.org/map">Геоложка карта на света</a> - Геоложка карта на света.</li>
+<li><a href="https://kais.cadastre.bg/bg/Map">CadastreBG</a> <img alt="💶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4b6.svg" title=":euro:" /> - Интерактивена кадастрална карта на България, с възможност за закупуване на данни за избрани имоти, сгради и самостоятелни обекти на собственост.</li>
+<li><a href="https://gkf.cadastre.bg/">Геокартфонд</a> <img alt="💶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4b6.svg" title=":euro:" /> - Интерактивена карта Геокартфонд, съдържа ЕТК в М 1:5000 и 1:10 000 с възможност за закупуване на карти във висока резолюция. </li>
+<li><a href="https://globe.gl/example/submarine-cables/">Глобус с подводни интернет кабели</a> - Интерактивен глобус с активните подводни кабели, по които текат сигналите на интернет.</li>
+<li><a href="https://www.chronotrains.com/">Chronotrains</a> - Интерактивна карта, която показва колко далече можеш да стигнеш с влак за 5 часа от всяка жп гара в Европа.</li>
+<li><a href="https://tjukanovt.github.io/notable-people">Notable people</a> - Интерактивна карта, показваща име на известна личност от всяко населено място.</li>
+</ul>
+<h2 id="_14">Онлайн визуализации<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://atlas.cid.harvard.edu/explore">The Atlas of Economic Complexity</a> - Визуализация на икономическия стокообмен по сектори и държави в света.</li>
+<li><a href="https://sketchfab.com/baxterbaxter/collections/rocks">Rocks - A 3D model collection</a> - Колекция с 3D-модели на скали.</li>
+<li><a href="https://ciechanow.ski/gps/">GPS</a> - Обяснение как работят глобалните навигационни спътникови системи (ГНСС).</li>
+<li><a href="https://www.surnamemap.eu/">Surname Map</a> - Проверка на географското разпространението на фамилните имена в някои държави в Европа.</li>
+<li><a href="https://thiscitydoesnotexist.com/">This City Does Not Exist</a> - Генерирани сателитни снимки на градове чрез изкуствен интелект.</li>
+<li><a href="https://2012.osmz.ru/#10/42.8996/22.6715">OpenStreetMap 2012</a> - Сравнение на OpenStreetMap през 2012 и 2022.</li>
+</ul>
+<h2 id="_15">Картографски визуализации<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://observablehq.com/@d3/projection-comparison">Сравняване на картографските проекции</a> - Интерактивно сравнение на световната карта в различните картографски проекции с d3.</li>
+<li><a href="https://bl.ocks.org/syntagmatic/ba569633d51ebec6ec6e">Изкривяване на картографските проекции</a> - Интерактивно сравнение на изкривяванията на различните картографски проекции с d3.</li>
+<li><a href="https://observablehq.com/@d3/projection-transitions">Светът в различни картографски проекции</a> - Интерактивна визуализация на световната карта в различни картографски проекции с d3.</li>
+<li><a href="https://thetruesize.com/">Сравнение на реалните размери на  държавите в света</a> - Възможност за сравнение на реалните размери на  държавите в света, без деформациите при проекцията на Меркатор.</li>
+<li><a href="https://mrgris.com/projects/merc-extreme/#7d2b28c5@43.83557,25.96566">Екстремен Меркатор</a> - Използване на меркаторовата проекция с изключителни изкривявания на площите.</li>
+<li><a href="https://minitokyo3d.com">МиниТокио3д</a> - Интерактивна карта на разположението на метровлаковете на Токийското метро в реално време.</li>
+</ul>
+<h2 id="_16">Географски игри<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.sporcle.com/games/category/geography">Sporcle</a> - Колекция от игри тип викторина на географска и не само тематика. Лесен начин за запаметяване на държави, столици, градове и др.</li>
+<li><a href="https://www.geoguessr.com">geoguessr</a> - Познай къде се намираш на картата по снимка от гугъл мапс.</li>
+<li><a href="https://lines.chromeexperiments.com">landlines</a> - Нарисувай линия  на екрана и ще получиш сателитна снимка, изобразяваща същата форма.</li>
+<li><a href="https://online.seterra.com/en">Saterra</a> - Колекция от игри викторини, свързани с политическа и природна география. </li>
+<li><a href="https://worldle.teuteuf.fr">Worldle</a> - Познай държавата по нейните граници подобно на WORDLE.</li>
+<li><a href="https://globle-game.com/">Globle</a> - Познай държавата тип &ldquo;топло и студено&rdquo;.</li>
+<li><a href="https://countryle.com/">Countryle</a> - Познай държавата с географски и статистически жокери.</li>
+</ul>
+<h2 id="_17">Инструменти за градско планиране<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://streetmix.net">Streetmix</a> - Напречен профил на улици. Нарисувай уличното платно такова каквото е или каквото искаш да бъде - с велоалеи, тротоари и активни ленти.</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Долен колонтитул">
+      
+        <a href="../../gisintro/99_licence/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Предишна
+              </span>
+              13. Лиценз
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../1000_data/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Следваща
+              </span>
+              ГИС данни
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u0430\u0439", "clipboard.copied": "\u041a\u043e\u043f\u0438\u0440\u0430\u043d\u043e", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u0422\u044a\u0440\u0441\u0438", "search.result.placeholder": "\u0417\u0430\u043f\u043e\u0447\u043d\u0435\u0442\u0435 \u0434\u0430 \u043f\u0438\u0448\u0435\u0442\u0435, \u0437\u0430 \u0434\u0430 \u0442\u044a\u0440\u0441\u0438\u0442\u0435", "search.result.none": "\u041d\u044f\u043c\u0430 \u0440\u0435\u0437\u0443\u043b\u0442\u0430\u0442\u0438", "search.result.one": "1 \u0440\u0435\u0437\u0443\u043b\u0442\u0430\u0442", "search.result.other": "# \u0440\u0435\u0437\u0443\u043b\u0442\u0430\u0442\u0430", "search.result.more.one": "\u043e\u0449\u0435 1 \u043d\u0430 \u0442\u0430\u0437\u0438 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430", "search.result.more.other": "\u043e\u0449\u0435 # \u043d\u0430 \u0442\u0430\u0437\u0438 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.217ffd95.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.926459b3.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/cookies-eu-banner@2.0.1/dist/cookies-eu-banner.js"></script>
+      
+        <script src="../../assets/consent.js"></script>
+      
+    
+  </body>
+</html>
